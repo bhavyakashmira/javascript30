@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="" ></script>
+    <title>key detection</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+const pressed = [];
+const secretcode = "wesbos";
+
+window.addEventListener('keyup' ,(e)=>{
+  pressed.push(e.key);
+  pressed.splice(-secretcode.length-1 , pressed.length-secretcode.length);
+  if(pressed.join('')===secretcode){
+    cornify_add();
+    
+  }
+
+  
+})
+</script>
+</html>
